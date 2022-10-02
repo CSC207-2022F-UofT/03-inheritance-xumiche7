@@ -6,6 +6,8 @@
  * helpful while working through this exercise.
  */
 
+import java.util.ArrayList;
+
 /*
  * TODO: Create a public class named CrossbodyBag which is a subclass of Bag
  *       In addition to the attributes in Bag, the CrossbodyBag should have an
@@ -31,28 +33,29 @@
  *       See the tests in test/CrossBodyBagTest.java for examples.
  */
 public class CrossbodyBag extends Bag {
-
+    private int numberOfStrap;
     /**
-     * Creates a new HandBag with the given color and
-     * capacity.
+     * Creates a new CrossbodyBag with the given color,
+     * capacity and numberOfStraps.
      *
      * @param color
      * @param capacity
+     * @param numberOfStraps
      */
-    CrossbodyBag(String color, int capacity, int numberOfStraps) {
+    public CrossbodyBag(String color, int capacity, int numberOfStraps) {
         /**
          * This is how we call the parent's constructor
          * The Python equivalent is super().__init__(...)
          */
         super(color, capacity);
-        numberOfStraps = 0;
+        numberOfStrap = numberOfStraps;
     }
 
     /**
      * Increase the capacity of this bag by 2.
      */
     public int getNumberOfStraps() {
-        return this.getNumberOfContents();
+        return numberOfStrap;
     }
 
     @Override
@@ -68,7 +71,7 @@ public class CrossbodyBag extends Bag {
 
     @Override
     public String toString() {
-        return this.getColor() + " Crossbody Bag with" + this.getNumberOfStraps() + "straps (" + this.getNumberOfContents() + " / " +
+        return this.getColor() + " Crossbody Bag with " + this.getNumberOfStraps() + " straps (" + this.getNumberOfContents() + " / " +
                 this.getCapacity() + ")";
     }
 }

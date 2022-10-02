@@ -15,10 +15,10 @@ public abstract class Bag {
      *       - an int named capacity
      *       - an array of Strings named contents
      */
-    private static String color;
-    private static int numberOfContents;
-    private static int capacity;
-    private static ArrayList<String> contents;
+    private String color;
+    private int numberOfContents;
+    private int capacity;
+    private ArrayList<String> contents;
 
 
     /*
@@ -50,10 +50,10 @@ public abstract class Bag {
     public String getColor() {return color;
     }
 
-    public int getNumberOfContents () {return contents.size();
+    public int getNumberOfContents () {return numberOfContents;
     }
 
-    public int getCapacity () {return this.capacity;
+    public int getCapacity () {return capacity;
     }
 
     /*
@@ -134,8 +134,8 @@ public abstract class Bag {
      */
     @Override
     public String toString() {
-        return this.color + " Bag (" + this.numberOfContents + " / " +
-                this.capacity + ")";
+        return this.getColor() + " Bag (" + this.getNumberOfContents() + " / " +
+                this.getCapacity() + ")";
     }
 
     /*

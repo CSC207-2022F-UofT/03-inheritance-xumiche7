@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * This file defines an child class named HandBag.
  * We have provided most of the code for this class, however,
@@ -7,7 +9,6 @@
  * helpful while working through this exercise.
  */
 public class HandBag extends Bag{
-
     /**
      * Creates a new HandBag with the given color and
      * capacity.
@@ -15,12 +16,13 @@ public class HandBag extends Bag{
      * @param color
      * @param capacity
      */
-    HandBag(String color, int capacity) {
+    public HandBag(String color, int capacity) {
         /**
          * This is how we call the parent's constructor
          * The Python equivalent is super().__init__(...)
          */
         super(color, capacity);
+
     }
 
     /**
